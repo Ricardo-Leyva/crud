@@ -2,3 +2,17 @@
 GET http://localhost:4000/api/empleados
 ###
 POST  http://localhost:4000/api/empleados
+Content-Type: application/json
+
+{
+    "nombre": "carlos",
+    "cargo" : "Developer",
+    "office": "puto",
+    "salario": "20000"
+}
+
+###
+GET   http://localhost:4000/api/empleados/5fd27479ab25978d58197993
+
+###
+DELETE http://localhost:4000/api/empleados/5fd27479ab25978d58197993
