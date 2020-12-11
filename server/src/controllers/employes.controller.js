@@ -21,7 +21,10 @@ empleado.getempleado = async (req, res) => {
     res.send(empleado3)
 
 };
-empleado.editarempleado = (req, res) => { };
+empleado.editarempleado = async(req, res) => { 
+await empleados.findByIdAndUpdate(req.params.id, req.body)
+res.json({status:'empleado actualizado'})
+};
 
 empleado.borrarempleado = async (req, res) => {
     await empleados.findByIdAndDelete(req.params.id)

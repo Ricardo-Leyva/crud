@@ -5,8 +5,8 @@ const employeesctrl = require('../controllers/employes.controller')
 router.get('/', employeesctrl.getempleados);
 router.post('/', employeesctrl.crearempleado);
 router.get('/:id', employeesctrl.getempleado);
-router.get('/:id', employeesctrl.editarempleado);
-router.get('/:id', employeesctrl.borrarempleado);
+router.put('/:id', employeesctrl.editarempleado);
+router.delete('/:id', employeesctrl.borrarempleado);
 
 
 module.exports = router
